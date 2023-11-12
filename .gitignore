@@ -1,5 +1,11 @@
 /build/
+<<<<<<< Updated upstream
 /nbproject/*
 /bin/
 .classpath
 .project
+=======
+/nbproject/private/
+nbproject/private/private.properties
+nbproject/project.properties
+>>>>>>> Stashed changes
