@@ -55,6 +55,11 @@ public class LoginJugador extends javax.swing.JFrame {
         btnIngresarJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnIngresarJugador.setText("INGRESAR");
         btnIngresarJugador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIngresarJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarJugadorActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnIngresarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
         btnVolverJugador.setBackground(new java.awt.Color(255, 255, 255));
@@ -94,6 +99,10 @@ public class LoginJugador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIngresarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarJugadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresarJugadorActionPerformed
 
     /**
      * @param args the command line arguments

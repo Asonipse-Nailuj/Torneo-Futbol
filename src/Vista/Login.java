@@ -51,6 +51,11 @@ public class Login extends javax.swing.JFrame {
         btnAdminLogin.setText("ADMINISTRADOR");
         btnAdminLogin.setToolTipText("");
         btnAdminLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdminLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminLoginActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, 40));
 
         btnJugadorLogin.setBackground(new java.awt.Color(153, 255, 153));
@@ -93,6 +98,10 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdminLoginActionPerformed
 
     /**
      * @param args the command line arguments
