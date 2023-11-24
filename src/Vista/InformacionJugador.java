@@ -40,14 +40,16 @@ public class InformacionJugador extends javax.swing.JFrame {
         lblDocumentoPerfilJugador = new javax.swing.JLabel();
         lblTelefonoPerfilJugador = new javax.swing.JLabel();
         lblMailPerfilJugador = new javax.swing.JLabel();
+        lblPosicionPerfilJugador = new javax.swing.JLabel();
         lblModoPerfilJugador = new javax.swing.JLabel();
-        lblSuscripcionPerfilJugador = new javax.swing.JLabel();
         txtNombrePerfilJugador = new javax.swing.JTextField();
         txtApellidoPerfilJugador = new javax.swing.JTextField();
         txtDocumentoPerfilJugador = new javax.swing.JTextField();
         txtTelefonoPerfilJugador = new javax.swing.JTextField();
         txtMailPerfilJugador = new javax.swing.JTextField();
-        txtModoPerfilJugador = new javax.swing.JTextField();
+        txtPosicionPerfilJugador = new javax.swing.JTextField();
+        txtPosicionJugador = new javax.swing.JTextField();
+        lblSuscripcionPerfilJugador = new javax.swing.JLabel();
         txtSuscripcionJugador = new javax.swing.JTextField();
         btnSalirPerfilJugador = new javax.swing.JButton();
 
@@ -74,7 +76,7 @@ public class InformacionJugador extends javax.swing.JFrame {
         lblNombreBienvenidoPerfilJugador.setText("JUGADOR");
         jPanel2.add(lblNombreBienvenidoPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 160, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 410));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 420));
 
         lblPerfilJugador.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
         lblPerfilJugador.setText("PERFIL DEL JUGADOR");
@@ -103,13 +105,13 @@ public class InformacionJugador extends javax.swing.JFrame {
         lblMailPerfilJugador.setText("E-mail:");
         jPanel3.add(lblMailPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
+        lblPosicionPerfilJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblPosicionPerfilJugador.setText("Posicion:");
+        jPanel3.add(lblPosicionPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
         lblModoPerfilJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblModoPerfilJugador.setText("Modo:");
-        jPanel3.add(lblModoPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
-
-        lblSuscripcionPerfilJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblSuscripcionPerfilJugador.setText("Suscripcion:");
-        jPanel3.add(lblSuscripcionPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        jPanel3.add(lblModoPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         txtNombrePerfilJugador.setEnabled(false);
         jPanel3.add(txtNombrePerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 5, 280, -1));
@@ -126,13 +128,20 @@ public class InformacionJugador extends javax.swing.JFrame {
         txtMailPerfilJugador.setEnabled(false);
         jPanel3.add(txtMailPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 165, 280, -1));
 
-        txtModoPerfilJugador.setEnabled(false);
-        jPanel3.add(txtModoPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 280, -1));
+        txtPosicionPerfilJugador.setEnabled(false);
+        jPanel3.add(txtPosicionPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 280, -1));
+
+        txtPosicionJugador.setEnabled(false);
+        jPanel3.add(txtPosicionJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 245, 280, -1));
+
+        lblSuscripcionPerfilJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblSuscripcionPerfilJugador.setText("Suscripcion:");
+        jPanel3.add(lblSuscripcionPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
         txtSuscripcionJugador.setEnabled(false);
-        jPanel3.add(txtSuscripcionJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 245, 280, -1));
+        jPanel3.add(txtSuscripcionJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 285, 280, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 520, 300));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 520, 320));
 
         btnSalirPerfilJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar.png"))); // NOI18N
         jPanel1.add(btnSalirPerfilJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 5, 25, 25));
@@ -200,13 +209,15 @@ public class InformacionJugador extends javax.swing.JFrame {
     public javax.swing.JLabel lblNombreBienvenidoPerfilJugador;
     private javax.swing.JLabel lblNombrePerfilJugador;
     private javax.swing.JLabel lblPerfilJugador;
+    private javax.swing.JLabel lblPosicionPerfilJugador;
     private javax.swing.JLabel lblSuscripcionPerfilJugador;
     private javax.swing.JLabel lblTelefonoPerfilJugador;
     public javax.swing.JTextField txtApellidoPerfilJugador;
     public javax.swing.JTextField txtDocumentoPerfilJugador;
     public javax.swing.JTextField txtMailPerfilJugador;
-    public javax.swing.JTextField txtModoPerfilJugador;
     public javax.swing.JTextField txtNombrePerfilJugador;
+    public javax.swing.JTextField txtPosicionJugador;
+    public javax.swing.JTextField txtPosicionPerfilJugador;
     public javax.swing.JTextField txtSuscripcionJugador;
     public javax.swing.JTextField txtTelefonoPerfilJugador;
     // End of variables declaration//GEN-END:variables
