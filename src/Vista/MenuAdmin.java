@@ -35,7 +35,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         lblCerrarSesion = new javax.swing.JLabel();
         lblBienvenidoAdmin = new javax.swing.JLabel();
         lblAdmin = new javax.swing.JLabel();
-        lblNombre = new javax.swing.JLabel();
+        lblNombreFutbolCopa = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btnInfraccion = new javax.swing.JButton();
         lblGestionarInfraccion = new javax.swing.JLabel();
@@ -85,9 +85,9 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 410));
 
-        lblNombre.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
-        lblNombre.setText("FUTBOL COPA");
-        jPanel1.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
+        lblNombreFutbolCopa.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
+        lblNombreFutbolCopa.setText("FUTBOL COPA");
+        jPanel1.add(lblNombreFutbolCopa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -254,6 +254,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel lblGestionarNotificacion;
     private javax.swing.JLabel lblGestionarPartido;
     private javax.swing.JLabel lblImagenAdmin;
-    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreFutbolCopa;
     // End of variables declaration//GEN-END:variables
 }

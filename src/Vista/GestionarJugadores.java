@@ -31,7 +31,6 @@ public class GestionarJugadores extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         lblGestionJugadores = new javax.swing.JLabel();
         btnConsultarJugador = new javax.swing.JButton();
-        btnAgregarJugador = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableJugadores = new javax.swing.JTable();
@@ -61,11 +60,6 @@ public class GestionarJugadores extends javax.swing.JFrame {
         btnConsultarJugador.setText("CONSULTAR");
         btnConsultarJugador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnConsultarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
-
-        btnAgregarJugador.setBackground(new java.awt.Color(255, 255, 255));
-        btnAgregarJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnAgregarJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/crear.png"))); // NOI18N
-        jPanel1.add(btnAgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -150,7 +144,6 @@ public class GestionarJugadores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarJugador;
     private javax.swing.JButton btnConsultarJugador;
     private javax.swing.JButton btnSalirGestionJugadores;
     private javax.swing.JPanel jPanel1;
