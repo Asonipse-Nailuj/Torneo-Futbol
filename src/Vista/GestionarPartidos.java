@@ -125,13 +125,13 @@ public class GestionarPartidos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCrearPartido;
-    private javax.swing.JButton btnSalirGestionPartidos;
+    public javax.swing.JButton btnCrearPartido;
+    public javax.swing.JButton btnSalirGestionPartidos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblEstadio;
     private javax.swing.JLabel lblGestionPartidos;
-    private javax.swing.JTable tablePartidos;
+    public javax.swing.JTable tablePartidos;
     // End of variables declaration//GEN-END:variables
 }

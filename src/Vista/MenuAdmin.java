@@ -233,18 +233,18 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalificacion;
-    private javax.swing.JButton btnEquipos;
-    private javax.swing.JButton btnInfraccion;
-    private javax.swing.JButton btnJugadores;
-    private javax.swing.JButton btnNotificacion;
-    private javax.swing.JButton btnPartidos;
-    private javax.swing.JButton btnSalirLoginJugador;
-    private javax.swing.JButton btnSalirMenuAdmin;
+    public javax.swing.JButton btnCalificacion;
+    public javax.swing.JButton btnEquipos;
+    public javax.swing.JButton btnInfraccion;
+    public javax.swing.JButton btnJugadores;
+    public javax.swing.JButton btnNotificacion;
+    public javax.swing.JButton btnPartidos;
+    public javax.swing.JButton btnSalirLoginJugador;
+    public javax.swing.JButton btnSalirMenuAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblAdmin;
+    public javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel lblBienvenidoAdmin;
     private javax.swing.JLabel lblCerrarSesion;
     private javax.swing.JLabel lblGestionarCalificacion;

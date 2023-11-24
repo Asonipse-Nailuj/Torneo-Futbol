@@ -144,15 +144,15 @@ public class GestionarCalificaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConsultarCalificacion;
-    private javax.swing.JButton btnSalirGestionCalificaciones;
+    public javax.swing.JButton btnConsultarCalificacion;
+    public javax.swing.JButton btnSalirGestionCalificaciones;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblGestionCalificacion;
     private javax.swing.JLabel lblIdentificacionJugadorCalificacion;
     private javax.swing.JLabel lblImagenInfraccion;
-    private javax.swing.JTable tableCalificacion;
-    private javax.swing.JTextField txtIdentificacionJugadorCalificacion;
+    public javax.swing.JTable tableCalificacion;
+    public javax.swing.JTextField txtIdentificacionJugadorCalificacion;
     // End of variables declaration//GEN-END:variables
 }

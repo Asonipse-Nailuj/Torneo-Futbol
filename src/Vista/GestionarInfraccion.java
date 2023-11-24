@@ -144,15 +144,15 @@ public class GestionarInfraccion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConsultarInfraccion;
-    private javax.swing.JButton btnSalirGestionInfracciones;
+    public javax.swing.JButton btnConsultarInfraccion;
+    public javax.swing.JButton btnSalirGestionInfracciones;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblGestionInfraccion;
     private javax.swing.JLabel lblIdentificacionJugadorInfraccion;
     private javax.swing.JLabel lblImagenInfraccion;
-    private javax.swing.JTable tableInfraccion;
-    private javax.swing.JTextField txtIdentificacionJugadorInfraccion;
+    public javax.swing.JTable tableInfraccion;
+    public javax.swing.JTextField txtIdentificacionJugadorInfraccion;
     // End of variables declaration//GEN-END:variables
 }

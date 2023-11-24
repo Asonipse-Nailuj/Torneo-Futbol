@@ -187,27 +187,27 @@ public class InformacionJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSalirPerfilJugador;
+    public javax.swing.JButton btnSalirPerfilJugador;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lblApellidoPerfilJugador;
     private javax.swing.JLabel lblBienvenidoPerfilJugador;
     private javax.swing.JLabel lblDocumentoPerfilJugador;
-    private javax.swing.JLabel lblImagenPerfilJugador;
+    public javax.swing.JLabel lblImagenPerfilJugador;
     private javax.swing.JLabel lblMailPerfilJugador;
     private javax.swing.JLabel lblModoPerfilJugador;
-    private javax.swing.JLabel lblNombreBienvenidoPerfilJugador;
+    public javax.swing.JLabel lblNombreBienvenidoPerfilJugador;
     private javax.swing.JLabel lblNombrePerfilJugador;
     private javax.swing.JLabel lblPerfilJugador;
     private javax.swing.JLabel lblSuscripcionPerfilJugador;
     private javax.swing.JLabel lblTelefonoPerfilJugador;
-    private javax.swing.JTextField txtApellidoPerfilJugador;
-    private javax.swing.JTextField txtDocumentoPerfilJugador;
-    private javax.swing.JTextField txtMailPerfilJugador;
-    private javax.swing.JTextField txtModoPerfilJugador;
-    private javax.swing.JTextField txtNombrePerfilJugador;
-    private javax.swing.JTextField txtSuscripcionJugador;
-    private javax.swing.JTextField txtTelefonoPerfilJugador;
+    public javax.swing.JTextField txtApellidoPerfilJugador;
+    public javax.swing.JTextField txtDocumentoPerfilJugador;
+    public javax.swing.JTextField txtMailPerfilJugador;
+    public javax.swing.JTextField txtModoPerfilJugador;
+    public javax.swing.JTextField txtNombrePerfilJugador;
+    public javax.swing.JTextField txtSuscripcionJugador;
+    public javax.swing.JTextField txtTelefonoPerfilJugador;
     // End of variables declaration//GEN-END:variables
 }

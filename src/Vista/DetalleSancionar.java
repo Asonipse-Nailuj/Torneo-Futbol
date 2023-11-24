@@ -156,10 +156,10 @@ public class DetalleSancionar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptarSancionar;
-    private javax.swing.JButton btnCancelarSancionar;
-    private javax.swing.JButton btnSalirDetalleSancionar;
-    private javax.swing.JComboBox cboxMotivo;
+    public javax.swing.JButton btnAceptarSancionar;
+    public javax.swing.JButton btnCancelarSancionar;
+    public javax.swing.JButton btnSalirDetalleSancionar;
+    public javax.swing.JComboBox cboxMotivo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -167,6 +167,6 @@ public class DetalleSancionar extends javax.swing.JFrame {
     private javax.swing.JLabel lblCritica;
     private javax.swing.JLabel lblDetalleSancionar;
     private javax.swing.JLabel lblSigno;
-    private javax.swing.JTextArea txtACritica;
+    public javax.swing.JTextArea txtACritica;
     // End of variables declaration//GEN-END:variables
 }

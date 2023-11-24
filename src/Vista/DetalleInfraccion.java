@@ -144,8 +144,8 @@ public class DetalleInfraccion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSalirDetalleInfraccion;
-    private javax.swing.JComboBox cboxMotivoInfraccion;
+    public javax.swing.JButton btnSalirDetalleInfraccion;
+    public javax.swing.JComboBox cboxMotivoInfraccion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -153,6 +153,6 @@ public class DetalleInfraccion extends javax.swing.JFrame {
     private javax.swing.JLabel lblCriticaInfraccion;
     private javax.swing.JLabel lblDetalleInfraccion;
     private javax.swing.JLabel lblSignoInfraccion;
-    private javax.swing.JTextArea txtACriticaInfraccion;
+    public javax.swing.JTextArea txtACriticaInfraccion;
     // End of variables declaration//GEN-END:variables
 }

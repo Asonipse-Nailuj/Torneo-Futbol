@@ -140,15 +140,15 @@ public class LoginJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIngresarJugador;
-    private javax.swing.JButton btnSalirLoginJugador;
-    private javax.swing.JButton btnVolverJugador;
+    public javax.swing.JButton btnIngresarJugador;
+    public javax.swing.JButton btnSalirLoginJugador;
+    public javax.swing.JButton btnVolverJugador;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblIdentificacionJugador;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPastoLogin;
-    private javax.swing.JTextField txtIdentificacionJugador;
+    public javax.swing.JTextField txtIdentificacionJugador;
     // End of variables declaration//GEN-END:variables
 }

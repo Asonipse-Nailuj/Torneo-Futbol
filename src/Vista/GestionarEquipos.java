@@ -172,9 +172,9 @@ public class GestionarEquipos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGenerarEquipos;
-    private javax.swing.JButton btnGenerarEquipos1;
-    private javax.swing.JButton btnSalirGestionEquipos;
+    public javax.swing.JButton btnGenerarEquipos;
+    public javax.swing.JButton btnGenerarEquipos1;
+    public javax.swing.JButton btnSalirGestionEquipos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -186,7 +186,7 @@ public class GestionarEquipos extends javax.swing.JFrame {
     private javax.swing.JLabel lblImagenEquipo1;
     private javax.swing.JLabel lblImagenEquipo2;
     private javax.swing.JLabel lblVs;
-    private javax.swing.JTable tableEquipo1;
-    private javax.swing.JTable tableEquipo2;
+    public javax.swing.JTable tableEquipo1;
+    public javax.swing.JTable tableEquipo2;
     // End of variables declaration//GEN-END:variables
 }

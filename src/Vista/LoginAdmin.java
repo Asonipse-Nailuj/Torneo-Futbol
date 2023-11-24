@@ -140,9 +140,9 @@ public class LoginAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIngresarAdmin;
-    private javax.swing.JButton btnSalirLoginAdmin;
-    private javax.swing.JButton btnVolverAdmin;
+    public javax.swing.JButton btnIngresarAdmin;
+    public javax.swing.JButton btnSalirLoginAdmin;
+    public javax.swing.JButton btnVolverAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblContraseña;
@@ -150,7 +150,7 @@ public class LoginAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPastoLogin;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JTextField txtContraseña;
-    private javax.swing.JTextField txtUsuario;
+    public javax.swing.JTextField txtContraseña;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

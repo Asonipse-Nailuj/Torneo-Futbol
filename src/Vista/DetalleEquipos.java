@@ -158,7 +158,7 @@ public class DetalleEquipos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSalirDetalleEquipos;
+    public javax.swing.JButton btnSalirDetalleEquipos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -170,7 +170,7 @@ public class DetalleEquipos extends javax.swing.JFrame {
     private javax.swing.JLabel lblImagenEquipo1;
     private javax.swing.JLabel lblImagenEquipo2;
     private javax.swing.JLabel lblVsDetalleEquipo;
-    private javax.swing.JTable tableEquipo1Detalle;
-    private javax.swing.JTable tableEquipo2Detalle;
+    public javax.swing.JTable tableEquipo1Detalle;
+    public javax.swing.JTable tableEquipo2Detalle;
     // End of variables declaration//GEN-END:variables
 }

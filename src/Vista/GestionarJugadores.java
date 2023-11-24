@@ -144,15 +144,15 @@ public class GestionarJugadores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConsultarJugador;
-    private javax.swing.JButton btnSalirGestionJugadores;
+    public javax.swing.JButton btnConsultarJugador;
+    public javax.swing.JButton btnSalirGestionJugadores;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblGestionJugadores;
     private javax.swing.JLabel lblIdentificacionJugadorGestion;
     private javax.swing.JLabel lblImagenJugador;
-    private javax.swing.JTable tableJugadores;
-    private javax.swing.JTextField txtIdentificacionJugadorGestion;
+    public javax.swing.JTable tableJugadores;
+    public javax.swing.JTextField txtIdentificacionJugadorGestion;
     // End of variables declaration//GEN-END:variables
 }
