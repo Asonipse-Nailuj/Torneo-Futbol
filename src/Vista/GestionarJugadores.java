@@ -69,7 +69,7 @@ public class GestionarJugadores extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Documento", "Nombre", "Apellido", "Telefono", "Email", "Ver Detalle", "Modificar", "Eliminar"
+                "Nombre", "Apellido", "Documento", "Telefono", "Email", "Ver Detalle", "Modificar", "Eliminar"
             }
         ));
         jScrollPane2.setViewportView(tableJugadores);

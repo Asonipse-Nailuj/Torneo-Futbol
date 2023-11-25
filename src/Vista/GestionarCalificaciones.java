@@ -37,7 +37,7 @@ public class GestionarCalificaciones extends javax.swing.JFrame {
         btnSalirGestionCalificaciones = new javax.swing.JButton();
         lblIdentificacionJugadorCalificacion = new javax.swing.JLabel();
         txtIdentificacionJugadorCalificacion = new javax.swing.JTextField();
-        lblImagenInfraccion = new javax.swing.JLabel();
+        lblImagenCalificaciones = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,8 +87,8 @@ public class GestionarCalificaciones extends javax.swing.JFrame {
         txtIdentificacionJugadorCalificacion.setText("Identificacion");
         jPanel1.add(txtIdentificacionJugadorCalificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 250, 30));
 
-        lblImagenInfraccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calificacion_1.png"))); // NOI18N
-        jPanel1.add(lblImagenInfraccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 618, 443));
+        lblImagenCalificaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calificacion_1.png"))); // NOI18N
+        jPanel1.add(lblImagenCalificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 618, 443));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,7 +151,7 @@ public class GestionarCalificaciones extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblGestionCalificacion;
     private javax.swing.JLabel lblIdentificacionJugadorCalificacion;
-    private javax.swing.JLabel lblImagenInfraccion;
+    private javax.swing.JLabel lblImagenCalificaciones;
     public javax.swing.JTable tableCalificacion;
     public javax.swing.JTextField txtIdentificacionJugadorCalificacion;
     // End of variables declaration//GEN-END:variables

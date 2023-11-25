@@ -64,9 +64,10 @@ public class DetalleEquipos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Documento", "Nombre", "Suscripcion", "Modo", "Reemplazar", "Sancionar"
+                "Nombre", "Documento", "Modo", "Suscripcion", "Ver Detalle"
             }
         ));
+        tableEquipo1Detalle.setEnabled(false);
         jScrollPane4.setViewportView(tableEquipo1Detalle);
 
         jPanel2.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 250));
@@ -84,9 +85,10 @@ public class DetalleEquipos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Documento", "Nombre", "Suscripcion", "Modo", "Reemplazar", "Sancionar"
+                "Nombre", "Documento", "Modo", "Suscripcion", "Ver Detalle"
             }
         ));
+        tableEquipo2Detalle.setEnabled(false);
         jScrollPane2.setViewportView(tableEquipo2Detalle);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 250));

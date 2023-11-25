@@ -78,7 +78,7 @@ public class GestionarEquipos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Documento", "Nombre", "Suscripcion", "Modo", "Ver Detalle", "Reemplazar", "Sancionar"
+                "Nombre", "Documento", "Modo", "Suscripcion", "Ver Detalle", "Reemplazar", "Sancionar"
             }
         ));
         jScrollPane4.setViewportView(tableEquipo1);
@@ -98,7 +98,7 @@ public class GestionarEquipos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Documento", "Nombre", "Suscripcion", "Modo", "Ver Detalle", "Reemplazar", "Sancionar"
+                "Nombre", "Documento", "Modo", "Suscripcion", "Ver Detalle", "Reemplazar", "Sancionar"
             }
         ));
         jScrollPane2.setViewportView(tableEquipo2);
