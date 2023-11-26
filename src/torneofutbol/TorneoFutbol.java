@@ -6,17 +6,25 @@
 
 package torneofutbol;
 
+import Controlador.controlInicial;
+import Modelo.Jugador;
+import Vista.Login;
+import java.util.ArrayList;
+
 /**
  *
  * @author hp
  */
 public class TorneoFutbol {
+    ArrayList<Jugador> listajugadores = new ArrayList<>(10);
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.print("Hello");
+        controlInicial ctrl;
+        ctrl=new controlInicial(new Login(), new Jugador());
+        ctrl.inicio();
     }
     
 }
