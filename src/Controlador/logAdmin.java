@@ -11,6 +11,8 @@ import Vista.LoginAdmin;
 import Vista.MenuAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.util.ArrayList;
 
 /**
@@ -30,12 +32,51 @@ public class logAdmin implements ActionListener{
         this.loginadmin.btnVolverAdmin.addActionListener(this);
         this.loginadmin.txtContraseña.addActionListener(this);
         this.loginadmin.txtUsuario.addActionListener(this);
+        
+        AccionCampos();
     }
     
     public void inicio(){ //Mostrar en frame de login para el admin
         loginadmin.setTitle("Login Administrador");
         loginadmin.setLocationRelativeTo(null);
         loginadmin.setVisible(true); //Mostrar las vistas
+    }
+    
+    public void AccionCampos(){
+        // Agregar un FocusListener al JTextField
+        loginadmin.txtUsuario.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                // Acción a realizar cuando el JTextField obtiene el foco
+                
+                loginadmin.txtUsuario.setText("");
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                // Acción a realizar cuando el JTextField pierde el foco
+                if(loginadmin.txtUsuario.getText().isEmpty()){
+                loginadmin.txtUsuario.setText("Usuario");
+                }
+            }
+        });
+        
+        loginadmin.txtContraseña.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                // Acción a realizar cuando el JTextField obtiene el foco
+                
+                loginadmin.txtContraseña.setText("");
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                // Acción a realizar cuando el JTextField pierde el foco
+                if(loginadmin.txtContraseña.getText().isEmpty()){
+                loginadmin.txtContraseña.setText("Contraseña");
+                }
+            }
+        });
     }
 
     @Override

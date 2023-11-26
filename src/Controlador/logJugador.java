@@ -9,6 +9,8 @@ package Controlador;
 import Vista.LoginJugador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
@@ -28,12 +30,34 @@ public class logJugador implements ActionListener {
 
         // Asegúrate de agregar ActionListener solo al JTextField y no al botón
         this.loginjugador.txtIdentificacionJugador.addActionListener(this);
+        
+        AccionCampos();
     }
 
     public void inicio() {
         loginjugador.setTitle("Login Jugador");
         loginjugador.setLocationRelativeTo(null);
         loginjugador.setVisible(true);
+    }
+    
+    public void AccionCampos(){
+        // Agregar un FocusListener al JTextField
+        loginjugador.txtIdentificacionJugador.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                // Acción a realizar cuando el JTextField obtiene el foco
+                
+                loginjugador.txtIdentificacionJugador.setText("");
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                // Acción a realizar cuando el JTextField pierde el foco
+                if(loginjugador.txtIdentificacionJugador.getText().isEmpty()){
+                loginjugador.txtIdentificacionJugador.setText("Identificacion");
+                }
+            }
+        });
     }
 
     @Override

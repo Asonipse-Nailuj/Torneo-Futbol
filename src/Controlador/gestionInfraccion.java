@@ -9,6 +9,8 @@ package Controlador;
 import Vista.GestionarInfraccion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 /**
  *
@@ -24,12 +26,34 @@ public class gestionInfraccion implements ActionListener{
         this.gestionarinfraccion.btnConsultarInfraccion.addActionListener(this);
         this.gestionarinfraccion.btnSalirGestionInfracciones.addActionListener(this);
         this.gestionarinfraccion.txtIdentificacionJugadorInfraccion.addActionListener(this);
+        
+        AccionCampos();
     }
     
     public void inicio() {
         gestionarinfraccion.setTitle("Login Jugador");
         gestionarinfraccion.setLocationRelativeTo(null);
         gestionarinfraccion.setVisible(true);
+    }
+    
+    public void AccionCampos(){
+        // Agregar un FocusListener al JTextField
+        gestionarinfraccion.txtIdentificacionJugadorInfraccion.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                // Acción a realizar cuando el JTextField obtiene el foco
+                
+                gestionarinfraccion.txtIdentificacionJugadorInfraccion.setText("");
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                // Acción a realizar cuando el JTextField pierde el foco
+                if(gestionarinfraccion.txtIdentificacionJugadorInfraccion.getText().isEmpty()){
+                gestionarinfraccion.txtIdentificacionJugadorInfraccion.setText("Identificacion");
+                }
+            }
+        });
     }
 
     @Override
