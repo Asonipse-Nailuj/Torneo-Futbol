@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2023 a las 05:21:04
+-- Tiempo de generación: 30-11-2023 a las 08:30:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `torneodefutbol`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `gestionar_calificaciones`
+--
+
+CREATE TABLE `gestionar_calificaciones` (
+  `Documento` int(10) NOT NULL,
+  `puntaje_promedio` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `gestionar_equipos`
+--
+
+CREATE TABLE `gestionar_equipos` (
+  `Nombre` varchar(70) NOT NULL,
+  `Documento` int(10) NOT NULL,
+  `Modo` varchar(70) NOT NULL,
+  `Suscripcion` varchar(70) NOT NULL,
+  `Id_partido` int(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `gestionar_infraccion`
+--
+
+CREATE TABLE `gestionar_infraccion` (
+  `Documento` int(10) NOT NULL,
+  `Motivo` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `gestionar_partidos`
+--
+
+CREATE TABLE `gestionar_partidos` (
+  `Id` int(11) NOT NULL,
+  `Fecha` date NOT NULL,
+  `Estado` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -65,6 +113,26 @@ INSERT INTO `jugadores_selcolombia` (`Nombre`, `Apellido`, `Documento`, `Telefon
 ('Yimmi', 'Chara', 1018, '322418', 'yimmichara18@selcolombia.com', 'Volante', 'SOLIDARIO', 'OCASIONAL', '', ''),
 ('Santiago', 'Arias', 1019, '322419', 'santiagoarias19@selcolombia.com', 'Lateral', 'SOLIDARIO', 'OCASIONAL', '', ''),
 ('Abel', 'Aguilar', 1020, '322420', 'abelaguilar20@selcolombia.com', 'Volante', 'SOLIDARIO', 'OCASIONAL', '', '');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `gestionar_partidos`
+--
+ALTER TABLE `gestionar_partidos`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `gestionar_partidos`
+--
+ALTER TABLE `gestionar_partidos`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
