@@ -66,7 +66,7 @@ public class controlInicial implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == login.btnJugadorLogin) {
             logJugador logjugador;
-            logjugador = new logJugador(new LoginJugador());
+            logjugador = new logJugador(new LoginJugador(), listajugadores);
             logjugador.inicio();
         }
         else{
