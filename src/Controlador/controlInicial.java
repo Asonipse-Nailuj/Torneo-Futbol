@@ -7,6 +7,7 @@
 package Controlador;
 
 import Modelo.Jugador;
+import Modelo.Partido;
 import Vista.Login;
 import Vista.LoginAdmin;
 import Vista.LoginJugador;
@@ -30,11 +31,13 @@ public class controlInicial implements ActionListener{
     LoginJugador loginjugador;
     LoginAdmin loginadmin;
     Jugador jugador; //
+    Partido partido;
 
-    public controlInicial(Login login, Jugador jugador) {
+    public controlInicial(Login login, Jugador jugador, Partido partido) {
         this.login = login;
         this.jugador = jugador;
         this.listajugadores = listajugadores;
+        this.partido = partido;
         
         this.login.btnAdminLogin.addActionListener(this);
         this.login.btnJugadorLogin.addActionListener(this);
@@ -47,10 +50,12 @@ public class controlInicial implements ActionListener{
         login.setTitle("Inicio");
         login.setLocationRelativeTo(null);
         login.setVisible(true); //Mostrar las vistas
+        
     }
     public void iniciarList(){
-        listajugadores = new ArrayList(10); // Inicializa un ArrayList con una capacidad inicial de 10
+        listajugadores = new ArrayList(20); // Inicializa un ArrayList con una capacidad inicial de 20
         System.out.println("Iniciando lista de jugadores");
+        partido.Llenarlista(listajugadores); // Para llenar lista desde el Modelo
     }
     
 

@@ -81,16 +81,7 @@ public class logAdmin implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == loginadmin.txtUsuario) {
-            // Se borra el contenido del JTextField
-            loginadmin.txtUsuario.setText("");
-        }
-        else{
-            if (e.getSource() == loginadmin.txtContraseña) {
-            // Se borra el contenido del JTextField
-            loginadmin.txtContraseña.setText("");
-            }
-            else{
+        
                 if (e.getSource() == loginadmin.btnIngresarAdmin) {
                     //LOGICA CON BASE DE DATOS PARA VALIDAR SI ES EL ADMIN
                     menuAdmon menuadmon;
@@ -106,7 +97,7 @@ public class logAdmin implements ActionListener{
                     }
                 }
             }
-        }
-    }
+        
+    
     
 }

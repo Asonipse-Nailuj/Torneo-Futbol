@@ -8,6 +8,7 @@ package torneofutbol;
 
 import Controlador.controlInicial;
 import Modelo.Jugador;
+import Modelo.Partido;
 import Vista.Login;
 import java.util.ArrayList;
 
@@ -16,14 +17,14 @@ import java.util.ArrayList;
  * @author hp
  */
 public class TorneoFutbol {
-    ArrayList<Jugador> listajugadores = new ArrayList<>(10);
+    ArrayList<Jugador> listajugadores = new ArrayList<>(50);
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         controlInicial ctrl;
-        ctrl=new controlInicial(new Login(), new Jugador());
+        ctrl=new controlInicial(new Login(), new Jugador(), new Partido());
         ctrl.inicio();
     }
     

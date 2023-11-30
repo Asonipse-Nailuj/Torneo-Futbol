@@ -12,10 +12,37 @@ package Modelo;
  */
 public class Jugador {
     private int Documento;
+    private int Telefono;
     private String Nombre;
+    private String Apellido;
     private String Posicion;
+    private String Email;
     private String Modo;
     private String Suscripcion;
+
+    public int getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(int Telefono) {
+        this.Telefono = Telefono;
+    }
+
+    public String getApellido() {
+        return Apellido;
+    }
+
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
 
     public int getDocumento() {
         return Documento;

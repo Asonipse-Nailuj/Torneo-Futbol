@@ -40,7 +40,7 @@ public class gestionEquipos implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == gestionarequipos.btnGenerarEquipos) {
             //LOGICA PARA CREAR EQUIPOS
-            partido.Crearequipo();
+            
         }
         else{
             if (e.getSource() == gestionarequipos.btnGenerarEquipos) {
