@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package Modelo;
 
@@ -23,8 +19,8 @@ public class MySQL {
     public Connection base_datos() throws SQLException
     {   try {
       
-            Class.forName("com.mysql.jdbc.Driver"); // ESTABLECE LA CONEXION BASE DE DATOS, PONER LA DIRECCION DE MYSQL
-            Conexion = DriverManager.getConnection("jdbc:mysql://localhost/zoo1","root","");// CONEXION ALA BASE DE DATOS ABIERTA
+            Class.forName("com.mysql.jdbc.Driver"); // ESTABLECE LA CONEXION BASE DE DATOS
+            Conexion = DriverManager.getConnection("jdbc:mysql://localhost/torneodefutbol","root","");// CONEXION ALA BASE DE DATOS ABIERTA
                        
         } catch (ClassNotFoundException ex) {
           JOptionPane.showMessageDialog(null, "Error de  conexión con el servidor ");
