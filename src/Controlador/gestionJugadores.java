@@ -16,7 +16,6 @@ import java.awt.event.FocusListener;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import org.omg.CORBA.Object;
 
 /**
  *

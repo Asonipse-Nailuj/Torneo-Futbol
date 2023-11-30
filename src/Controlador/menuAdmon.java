@@ -33,6 +33,7 @@ public class menuAdmon implements ActionListener{
     GestionarJugadores gestionarjugadores;
     Partido partido;
     ArrayList<Jugador> listajugadores;
+    
 
     public menuAdmon(MenuAdmin menuadmin, ArrayList<Jugador> listajugadores) {
         this.menuadmin = menuadmin;
@@ -59,6 +60,7 @@ public class menuAdmon implements ActionListener{
     public void actionPerformed(ActionEvent e) {
                 
         if (e.getSource() == menuadmin.btnCalificacion) {
+            
             gestionCalificaciones calificacion;
             calificacion = new gestionCalificaciones(new GestionarCalificaciones());
             calificacion.inicio();

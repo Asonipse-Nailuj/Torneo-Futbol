@@ -7,6 +7,7 @@
 package Controlador;
 
 import Modelo.Jugador;
+import Modelo.MySQL;
 import Modelo.Partido;
 import Vista.Login;
 import Vista.LoginAdmin;
@@ -32,12 +33,14 @@ public class controlInicial implements ActionListener{
     LoginAdmin loginadmin;
     Jugador jugador; //
     Partido partido;
+    MySQL mysql;
 
-    public controlInicial(Login login, Jugador jugador, Partido partido) {
+    public controlInicial(Login login, Jugador jugador, Partido partido, MySQL mysql) {
         this.login = login;
         this.jugador = jugador;
         this.listajugadores = listajugadores;
         this.partido = partido;
+        this.mysql = mysql;
         
         this.login.btnAdminLogin.addActionListener(this);
         this.login.btnJugadorLogin.addActionListener(this);

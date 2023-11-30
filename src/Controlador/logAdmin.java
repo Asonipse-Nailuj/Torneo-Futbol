@@ -22,6 +22,8 @@ import java.util.ArrayList;
 public class logAdmin implements ActionListener{
     LoginAdmin loginadmin;
     ArrayList<Jugador> listajugadores; //Lista de jugadores
+    String usuario = "admin";
+    int contraseña = 1234;
 
     public logAdmin(LoginAdmin loginadmin, ArrayList<Jugador> listajugadores) {
         this.loginadmin = loginadmin;
@@ -84,9 +86,11 @@ public class logAdmin implements ActionListener{
         
                 if (e.getSource() == loginadmin.btnIngresarAdmin) {
                     //LOGICA CON BASE DE DATOS PARA VALIDAR SI ES EL ADMIN
+                    if(Integer.parseInt(loginadmin.txtContraseña.getText()) == contraseña && loginadmin.txtUsuario.getText().equals(usuario)){
                     menuAdmon menuadmon;
                     menuadmon = new menuAdmon(new MenuAdmin(), listajugadores);
                     menuadmon.inicio();
+                   }
                 }
                 else{
                     if (e.getSource() == loginadmin.btnVolverAdmin) {

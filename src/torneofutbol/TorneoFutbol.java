@@ -11,7 +11,7 @@ import Modelo.Jugador;
 import Modelo.Partido;
 import Vista.Login;
 import java.util.ArrayList;
-
+import Modelo.MySQL;
 /**
  *
  * @author hp
@@ -24,7 +24,7 @@ public class TorneoFutbol {
      */
     public static void main(String[] args) {
         controlInicial ctrl;
-        ctrl=new controlInicial(new Login(), new Jugador(), new Partido());
+        ctrl=new controlInicial(new Login(), new Jugador(), new Partido(), new MySQL());
         ctrl.inicio();
     }
     
