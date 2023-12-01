@@ -6,7 +6,6 @@
 package Controlador;
 
 import Modelo.Jugador;
-import Modelo.Partido;
 import Vista.GestionarCalificaciones;
 import Vista.GestionarEquipos;
 import Vista.GestionarInfraccion;
@@ -31,12 +30,10 @@ public class menuAdmon implements ActionListener {
     GestionarCalificaciones gestionarcalificaciones;
     GestionarInfraccion gestionarinfraccion;
     GestionarJugadores gestionarjugadores;
-    Partido partido;
     ArrayList<Jugador> listajugadores;
 
     public menuAdmon(MenuAdmin menuadmin) {
         this.menuadmin = menuadmin;
-        this.partido = partido;
 
         this.menuadmin.btnCalificacion.addActionListener(this);
         this.menuadmin.btnEquipos.addActionListener(this);
@@ -75,7 +72,7 @@ public class menuAdmon implements ActionListener {
                 } else {
                     if (e.getSource() == menuadmin.btnJugadores) {
                         gestionJugadores jugadores;
-                        jugadores = new gestionJugadores(new GestionarJugadores(), new Partido(), listajugadores);
+                        jugadores = new gestionJugadores(new GestionarJugadores(), listajugadores);
                         jugadores.inicio();
                     } else {
                         if (e.getSource() == menuadmin.btnPartidos) {

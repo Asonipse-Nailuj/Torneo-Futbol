@@ -14,6 +14,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -24,12 +26,10 @@ import javax.swing.table.DefaultTableModel;
 public class gestionJugadores implements ActionListener {
 
     GestionarJugadores gestionarjugadores;
-    Partido partido;
     ArrayList<Jugador> listajugadores;
 
-    public gestionJugadores(GestionarJugadores gestionarjugadores, Partido partido, ArrayList<Jugador> listajugadores) {
+    public gestionJugadores(GestionarJugadores gestionarjugadores, ArrayList<Jugador> listajugadores) {
         this.gestionarjugadores = gestionarjugadores;
-        this.partido = partido;
         this.listajugadores = listajugadores;
 
         this.gestionarjugadores.btnConsultarJugador.addActionListener(this);
@@ -48,17 +48,41 @@ public class gestionJugadores implements ActionListener {
 
     public void cargarDatos() {
         // Se trae la lista de jugadores registrada en la base de datos
-        //ArrayList<Jugador> listado_jugadores = Conexion.getJugadores();
-        
-        listajugadores = new ArrayList(20); // Inicializa un ArrayList con una capacidad inicial de 50
+
         listajugadores = Conexion.getJugadores();
         System.out.println("Iniciando lista");
 
-        // ....
+        // Limpiar el modelo antes de agregar nuevos datos
+        DefaultTableModel modelo = (DefaultTableModel) gestionarjugadores.tableJugadores.getModel();
+
+        modelo.setRowCount(0);
+
+        for (Jugador jugador : listajugadores) {
+
+            // Agregar los datos del jugador al modelo de la tabla
+            Object[] rowData = new Object[7];
+            rowData[0] = jugador.getNombre();
+            rowData[1] = jugador.getApellido();
+            rowData[2] = String.valueOf(jugador.getDocumento());
+            rowData[3] = String.valueOf(jugador.getTelefono());
+            rowData[4] = jugador.getEmail();
+            
+            JButton verDetalle = new JButton();
+            ImageIcon iconoDetalle = new ImageIcon("src/imagenes/verDetalle.png");
+            verDetalle.setIcon(iconoDetalle);
+            rowData[5] = verDetalle;
+            
+            JButton modificar = new JButton();
+            ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
+            verDetalle.setIcon(iconoModificar);
+            rowData[6] = modificar;
+
+            modelo.addRow(rowData);
+        }
     }
 
-    public void listar(JTable tabla, Jugador jugador) { // Funcion para mostrar los datos en Jtable
-        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+    public void listar(Jugador jugador) { // Funcion para mostrar los datos en Jtable
+        DefaultTableModel modelo = (DefaultTableModel) gestionarjugadores.tableJugadores.getModel();
 
         // Limpiar el modelo antes de agregar nuevos datos
         modelo.setRowCount(0);
@@ -100,12 +124,12 @@ public class gestionJugadores implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == gestionarjugadores.btnConsultarJugador) {
             //La lista ya debe estar llena, se debe llenar cuando se inicie el programa con la base de datos
-            if (partido.buscarJugador(Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText()), listajugadores)) {//Revisa si el jugador esta en la lista
-                Jugador jugador = new Jugador();
-                jugador = partido.BuscarJugador2(Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText()), listajugadores); // Tomo los datos del jugador
-                listar(gestionarjugadores.tableJugadores, jugador); //Llamo la funcion para mostrar en la tabla
-            }
-            else{
+            int documento = Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText());
+            Jugador jugador = Conexion.getDatosJugador(documento); // Tomo los datos del jugador
+
+            if (jugador != null) {//Revisa si el jugador esta en la lista
+                listar(jugador); //Llamo la funcion para mostrar en la tabla
+            } else {
                 System.out.println("Jugador no encontrado");
             }
 
