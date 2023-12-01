@@ -7,25 +7,24 @@ package Controlador;
 
 import Modelo.Conexion;
 import Modelo.Jugador;
-import Modelo.Partido;
 import Modelo.RenderTable;
 import Vista.GestionarJugadores;
+import Vista.InformacionJugador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Gustavo
  */
-public class gestionJugadores implements ActionListener {
+public class gestionJugadores implements ActionListener, MouseListener {
 
     GestionarJugadores gestionarjugadores;
     ArrayList<Jugador> listajugadores;
@@ -68,20 +67,14 @@ public class gestionJugadores implements ActionListener {
             rowData[2] = String.valueOf(jugador.getDocumento());
             rowData[3] = String.valueOf(jugador.getTelefono());
             rowData[4] = jugador.getEmail();
-
-            JLabel verDetalle = new JLabel();
-            ImageIcon iconoDetalle = new ImageIcon("src/imagenes/verDetalle.png");
-            verDetalle.setIcon(iconoDetalle);
+            JButton verDetalle = new JButton();
+            verDetalle.setText("Ver Detalle");
             rowData[5] = verDetalle;
-
-            JLabel modificar = new JLabel();
-            ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
-            verDetalle.setIcon(iconoModificar);
+            JButton modificar = new JButton();
+            modificar.setText("Modificar");
             rowData[6] = modificar;
-
-            JLabel eliminar = new JLabel();
-            ImageIcon iconoEliminar = new ImageIcon("src/imagenes/eliminar.png");
-            verDetalle.setIcon(iconoEliminar);
+            JButton eliminar = new JButton();
+            eliminar.setText("Eliminar");
             rowData[7] = eliminar;
 
             modelo.addRow(rowData);
@@ -89,6 +82,7 @@ public class gestionJugadores implements ActionListener {
 
         gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
         gestionarjugadores.tableJugadores.setModel(modelo);
+        gestionarjugadores.tableJugadores.addMouseListener(this);
     }
 
     public void listar(Jugador jugador) { // Funcion para mostrar los datos en Jtable
@@ -98,16 +92,27 @@ public class gestionJugadores implements ActionListener {
         modelo.setRowCount(0);
 
         // Agregar los datos del jugador al modelo de la tabla
-        String[] rowData = new String[5];
+        Object[] rowData = new Object[5];
         rowData[0] = jugador.getNombre();
         rowData[1] = jugador.getApellido();
         rowData[2] = String.valueOf(jugador.getDocumento());
         rowData[3] = String.valueOf(jugador.getTelefono());
         rowData[4] = jugador.getEmail();
+        JButton verDetalle = new JButton();
+        verDetalle.setText("Ver Detalle");
+        rowData[5] = verDetalle;
+        JButton modificar = new JButton();
+        modificar.setText("Modificar");
+        rowData[6] = modificar;
+        JButton eliminar = new JButton();
+        eliminar.setText("Eliminar");
+        rowData[7] = eliminar;
 
         modelo.addRow(rowData);
-        gestionarjugadores.tableJugadores.setModel(modelo);
 
+        gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
+        gestionarjugadores.tableJugadores.setModel(modelo);
+        gestionarjugadores.tableJugadores.addMouseListener(this);
     }
 
     public void AccionCampos() {
@@ -148,6 +153,39 @@ public class gestionJugadores implements ActionListener {
                 gestionarjugadores.dispose();
             }
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (gestionarjugadores.tableJugadores.columnAtPoint(e.getPoint()) == 5) {
+            int documento = Integer.parseInt((String) gestionarjugadores.tableJugadores.getValueAt(gestionarjugadores.tableJugadores.rowAtPoint(e.getPoint()), 2));
+
+            Jugador jugador = Conexion.getDatosJugador(documento);
+
+            InformacionJugador detalle = new InformacionJugador();
+            informacionJugador controlador = new informacionJugador(detalle, jugador);
+            controlador.inicio();
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 
 }

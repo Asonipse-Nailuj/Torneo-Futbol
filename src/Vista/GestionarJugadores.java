@@ -58,7 +58,7 @@ public class GestionarJugadores extends javax.swing.JFrame {
         btnConsultarJugador.setBackground(new java.awt.Color(0, 204, 0));
         btnConsultarJugador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnConsultarJugador.setText("CONSULTAR");
-        btnConsultarJugador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConsultarJugador.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(btnConsultarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -71,7 +71,15 @@ public class GestionarJugadores extends javax.swing.JFrame {
             new String [] {
                 "Nombre", "Apellido", "Documento", "Telefono", "Email", "Ver Detalle", "Modificar", "Eliminar"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(tableJugadores);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 250));

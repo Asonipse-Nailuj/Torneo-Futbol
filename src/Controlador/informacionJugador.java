@@ -4,75 +4,49 @@
  */
 package Controlador;
 
-import Modelo.Conexion;
 import Modelo.Jugador;
-import Modelo.Partido;
-import Vista.GestionarJugadores;
 import Vista.InformacionJugador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author Gustavo
  */
-public class informacionJugador implements ActionListener{
-    
-    InformacionJugador informacionjugador;
-    Partido partido;
-    ArrayList<Jugador> listajugadores;
-    int cedula;
+public class informacionJugador implements ActionListener {
 
-    public informacionJugador(InformacionJugador informacionjugador, Partido partido, ArrayList<Jugador> listajugadores, int cedula) {
+    InformacionJugador informacionjugador;
+
+    public informacionJugador(InformacionJugador informacionjugador, Jugador jugador) {
         this.informacionjugador = informacionjugador;
-        this.partido = partido;
-        this.cedula = cedula;
-        this.listajugadores = listajugadores;
-        
+
         this.informacionjugador.btnSalirPerfilJugador.addActionListener(this);
-        this.informacionjugador.txtApellidoPerfilJugador.addActionListener(this);
-        this.informacionjugador.txtDocumentoPerfilJugador.addActionListener(this);
-        this.informacionjugador.txtMailPerfilJugador.addActionListener(this);
-        this.informacionjugador.txtNombrePerfilJugador.addActionListener(this);
-        this.informacionjugador.txtPosicionJugador.addActionListener(this);
-        this.informacionjugador.txtPosicionPerfilJugador.addActionListener(this);
-        this.informacionjugador.txtSuscripcionJugador.addActionListener(this);
-        this.informacionjugador.txtTelefonoPerfilJugador.addActionListener(this);
-       
-        cargarDatos();
-        listar(cedula);
+
+        listar(jugador);
     }
-    
+
     public void inicio() {
-        informacionjugador.setTitle("Login Jugador");
+        informacionjugador.setTitle("Datos Jugador");
         informacionjugador.setLocationRelativeTo(null);
         informacionjugador.setVisible(true);
     }
 
-    public void cargarDatos() {
-        // Se trae la lista de jugadores registrada en la base de datos
-        //ArrayList<Jugador> listado_jugadores = Conexion.getJugadores();
-        
-        listajugadores = new ArrayList(20); // Inicializa un ArrayList con una capacidad inicial de 50
-        listajugadores = Conexion.getJugadores();
-        System.out.println("Iniciando lista");
-
-        // ....
-    }
-    
-    public void listar(int cedula) {
-        Jugador jugador = new Jugador();
-        jugador = partido.BuscarJugador2(cedula, listajugadores); // Tomo los datos del jugador
+    public void listar(Jugador jugador) {
         informacionjugador.txtNombrePerfilJugador.setText(String.valueOf(jugador.getNombre()));
         informacionjugador.txtApellidoPerfilJugador.setText(String.valueOf(jugador.getApellido()));
         informacionjugador.txtDocumentoPerfilJugador.setText(String.valueOf(jugador.getDocumento()));
-        informacionjugador.txtTelefonoPerfilJugador.setText(String.valueOf(jugador.getTelefono()));  
+        informacionjugador.txtTelefonoPerfilJugador.setText(String.valueOf(jugador.getTelefono()));
         informacionjugador.txtMailPerfilJugador.setText(String.valueOf(jugador.getEmail()));
         informacionjugador.txtPosicionPerfilJugador.setText(String.valueOf(jugador.getPosicion()));
         informacionjugador.txtPosicionJugador.setText(String.valueOf(jugador.getModo()));
         informacionjugador.txtSuscripcionJugador.setText(String.valueOf(jugador.getSuscripcion()));
-    
+        
+        ImageIcon perfil = new ImageIcon("src/imagenes/" + jugador.getDocumento()+ ".jpg");
+        informacionjugador.lblImagenPerfilJugador.setIcon(perfil);
+        
+        informacionjugador.lblNombreBienvenidoPerfilJugador.setText(jugador.getNombre());
+
     }
 
     @Override
@@ -81,5 +55,5 @@ public class informacionJugador implements ActionListener{
             informacionjugador.dispose();
         }
     }
-    
+
 }
