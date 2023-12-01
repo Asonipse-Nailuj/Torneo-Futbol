@@ -61,7 +61,7 @@ public class gestionJugadores implements ActionListener {
         for (Jugador jugador : listajugadores) {
 
             // Agregar los datos del jugador al modelo de la tabla
-            Object[] rowData = new Object[7];
+            Object[] rowData = new Object[8];
             rowData[0] = jugador.getNombre();
             rowData[1] = jugador.getApellido();
             rowData[2] = String.valueOf(jugador.getDocumento());
@@ -77,6 +77,11 @@ public class gestionJugadores implements ActionListener {
             ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
             verDetalle.setIcon(iconoModificar);
             rowData[6] = modificar;
+            
+            JButton eliminar = new JButton();
+            ImageIcon iconoEliminar = new ImageIcon("src/imagenes/eliminar.png");
+            verDetalle.setIcon(iconoEliminar);
+            rowData[7] = eliminar;
 
             modelo.addRow(rowData);
         }
