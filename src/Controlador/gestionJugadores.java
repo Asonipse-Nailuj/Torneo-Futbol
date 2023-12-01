@@ -73,20 +73,25 @@ public class gestionJugadores implements ActionListener {
             verDetalle.setIcon(iconoDetalle);
             rowData[5] = verDetalle;
 
+            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
+            
             JButton modificar = new JButton();
             ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
             verDetalle.setIcon(iconoModificar);
             rowData[6] = modificar;
             
+            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
+            
             JButton eliminar = new JButton();
             ImageIcon iconoEliminar = new ImageIcon("src/imagenes/eliminar.png");
             verDetalle.setIcon(iconoEliminar);
             rowData[7] = eliminar;
+            
+            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
 
             modelo.addRow(rowData);
         }
-
-        gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
+        
         gestionarjugadores.tableJugadores.setModel(modelo);
     }
 
