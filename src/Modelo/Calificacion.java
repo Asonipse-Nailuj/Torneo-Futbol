@@ -6,7 +6,6 @@ package Modelo;
  * @author Moreno Alvarez
  */
 public class Calificacion {
-    private int Id;
     private int Documento_Jugador;
     private double Promedio;
 
@@ -14,19 +13,9 @@ public class Calificacion {
 
     }
 
-    public Calificacion(int Id, int Documento_Jugador, double Promedio ) {
-        this.Id = Id;
+    public Calificacion(int Documento_Jugador, double Promedio ) {
         this.Documento_Jugador = Documento_Jugador;
         this.Promedio = Promedio;
-    }
-
-    
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int Id) {
-        this.Id = Id;
     }
 
     public int getDocumento_Jugador() {

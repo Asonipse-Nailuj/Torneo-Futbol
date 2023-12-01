@@ -98,14 +98,14 @@ public class gestionCalificaciones implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == gestionarcalificaciones.btnConsultarCalificacion) {
             //La lista ya debe estar llena, se debe llenar cuando se inicie el programa con la base de datos
-            if (partido.buscarJugador(Integer.parseInt(gestionarcalificaciones.txtIdentificacionJugadorCalificacion.getText()), listajugadores)) {//Revisa si el jugador esta en la lista
+            /*if (partido.buscarJugador(Integer.parseInt(gestionarcalificaciones.txtIdentificacionJugadorCalificacion.getText()), listajugadores)) {//Revisa si el jugador esta en la lista
                 Jugador jugador = new Jugador();
                 jugador = partido.BuscarJugador2(Integer.parseInt(gestionarcalificaciones.txtIdentificacionJugadorCalificacion.getText()), listajugadores); // Tomo los datos del jugador
                 listar(gestionarcalificaciones.tableCalificacion, jugador); //Llamo la funcion para mostrar en la tabla
             }
             else{
                 System.out.println("Jugador no encontrado");
-            }
+            }*/
         }
         else{
             if (e.getSource() == gestionarcalificaciones.btnSalirGestionCalificaciones) {

@@ -157,35 +157,43 @@ public class gestionJugadores implements ActionListener, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (gestionarjugadores.tableJugadores.columnAtPoint(e.getPoint()) == 5) {
-            int documento = Integer.parseInt((String) gestionarjugadores.tableJugadores.getValueAt(gestionarjugadores.tableJugadores.rowAtPoint(e.getPoint()), 2));
+        switch (gestionarjugadores.tableJugadores.columnAtPoint(e.getPoint())) {
+            case 5:  // Ver Detalle
+                int documento = Integer.parseInt((String) gestionarjugadores.tableJugadores.getValueAt(gestionarjugadores.tableJugadores.rowAtPoint(e.getPoint()), 2));
+                Jugador jugador = Conexion.getDatosJugador(documento);
+                InformacionJugador detalle = new InformacionJugador();
+                informacionJugador controlador = new informacionJugador(detalle, jugador);
+                controlador.inicio();
+                break;
 
-            Jugador jugador = Conexion.getDatosJugador(documento);
+            case 6: // Modificar
 
-            InformacionJugador detalle = new InformacionJugador();
-            informacionJugador controlador = new informacionJugador(detalle, jugador);
-            controlador.inicio();
+                break;
+
+            case 7: // Eliminar
+
+                break;
         }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-
+        // IGNORAR
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        // IGNORAR
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-
+        // IGNORAR
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-
+        // IGNORAR
     }
 
 }

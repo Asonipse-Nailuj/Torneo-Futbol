@@ -1,5 +1,3 @@
-
-
 package Modelo;
 
 /**
@@ -7,33 +5,21 @@ package Modelo;
  * @author Moreno Alvarez
  */
 public class Detalle_Calificacion {
-    private int Id;
+
     private int Documento_Calificacion;
     private int Puntaje;
     private String Relato;
     private int Id_Calificacion;
-    private int Fecha;
 
     public Detalle_Calificacion() {
 
     }
 
-    public Detalle_Calificacion(int Id, int Documento_Calificacion, int Puntaje, String Relato, int Id_Calificacion, int fecha) {
-        this.Id = Id;
+    public Detalle_Calificacion(int Documento_Calificacion, int Puntaje, String Relato, int Id_Calificacion) {
         this.Documento_Calificacion = Documento_Calificacion;
         this.Puntaje = Puntaje;
         this.Relato = Relato;
         this.Id_Calificacion = Id_Calificacion;
-        this.Fecha = Fecha;
-    }
-
-    
-    public int getId() {
-        return Id;
-    }
-
-    public void setTelefono(int Id) {
-        this.Id = Id;
     }
 
     public int getDocumento_Calificacion() {
@@ -66,14 +52,6 @@ public class Detalle_Calificacion {
 
     public void setId_Calificacion(int Id_Calificacion) {
         this.Id_Calificacion = Id_Calificacion;
-    }
-
-    public int getFecha() {
-        return Fecha;
-    }
-
-    public void setFecha(int Fecha) {
-        this.Fecha = Fecha;
     }
 
 }

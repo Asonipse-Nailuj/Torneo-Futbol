@@ -1,5 +1,3 @@
-
-
 package Modelo;
 
 /**
@@ -7,27 +5,24 @@ package Modelo;
  * @author Moreno Alvarez
  */
 public class Infraccion {
+
     private int Id;
     private String Motivo;
     private String Relato;
     private int Documento_Infraccion;
-    private int Fecha;
-    
 
     public Infraccion() {
 
     }
 
-    public Infraccion(int Id, String Motivo, String Relato, int Documento_Infraccion, int Fecha) {
+    public Infraccion(int Id, String Motivo, String Relato, int Documento_Infraccion) {
         this.Id = Id;
         this.Motivo = Motivo;
         this.Relato = Relato;
         this.Documento_Infraccion = Documento_Infraccion;
-        this.Fecha = Fecha;
-        
+
     }
 
-  
     public int getId() {
         return Id;
     }
@@ -60,13 +55,4 @@ public class Infraccion {
         this.Documento_Infraccion = Documento_Infraccion;
     }
 
-    public int getFecha() {
-        return Fecha;
-    }
-
-    public void setFecha(int Fecha) {
-        this.Fecha = Fecha;
-    }
-
-    
 }
