@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Conexion;
 import Modelo.Jugador;
 import Modelo.Partido;
+import Modelo.RenderTable;
 import Vista.GestionarJugadores;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -66,12 +67,12 @@ public class gestionJugadores implements ActionListener {
             rowData[2] = String.valueOf(jugador.getDocumento());
             rowData[3] = String.valueOf(jugador.getTelefono());
             rowData[4] = jugador.getEmail();
-            
+
             JButton verDetalle = new JButton();
             ImageIcon iconoDetalle = new ImageIcon("src/imagenes/verDetalle.png");
             verDetalle.setIcon(iconoDetalle);
             rowData[5] = verDetalle;
-            
+
             JButton modificar = new JButton();
             ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
             verDetalle.setIcon(iconoModificar);
@@ -79,6 +80,9 @@ public class gestionJugadores implements ActionListener {
 
             modelo.addRow(rowData);
         }
+
+        gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
+        gestionarjugadores.tableJugadores.setModel(modelo);
     }
 
     public void listar(Jugador jugador) { // Funcion para mostrar los datos en Jtable
