@@ -17,6 +17,7 @@ import java.awt.event.FocusListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -68,30 +69,25 @@ public class gestionJugadores implements ActionListener {
             rowData[3] = String.valueOf(jugador.getTelefono());
             rowData[4] = jugador.getEmail();
 
-            JButton verDetalle = new JButton();
+            JLabel verDetalle = new JLabel();
             ImageIcon iconoDetalle = new ImageIcon("src/imagenes/verDetalle.png");
             verDetalle.setIcon(iconoDetalle);
             rowData[5] = verDetalle;
 
-            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
-            
-            JButton modificar = new JButton();
+            JLabel modificar = new JLabel();
             ImageIcon iconoModificar = new ImageIcon("src/imagenes/modificar.png");
             verDetalle.setIcon(iconoModificar);
             rowData[6] = modificar;
-            
-            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
-            
-            JButton eliminar = new JButton();
+
+            JLabel eliminar = new JLabel();
             ImageIcon iconoEliminar = new ImageIcon("src/imagenes/eliminar.png");
             verDetalle.setIcon(iconoEliminar);
             rowData[7] = eliminar;
-            
-            gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
 
             modelo.addRow(rowData);
         }
-        
+
+        gestionarjugadores.tableJugadores.setDefaultRenderer(Object.class, new RenderTable());
         gestionarjugadores.tableJugadores.setModel(modelo);
     }
 
