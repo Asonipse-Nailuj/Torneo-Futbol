@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Controlador;
 
 import Modelo.Jugador;
@@ -17,14 +16,13 @@ import Vista.MenuAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import javax.swing.JButton;
 
 /**
  *
  * @author Gustavo
  */
-public class menuAdmon implements ActionListener{
-    
+public class menuAdmon implements ActionListener {
+
     MenuAdmin menuadmin;
     GestionarPartidos gestionarpartidos;
     GestionarEquipos gestionarequipos;
@@ -32,14 +30,11 @@ public class menuAdmon implements ActionListener{
     GestionarInfraccion gestionarinfraccion;
     GestionarJugadores gestionarjugadores;
     Partido partido;
-    ArrayList<Jugador> listajugadores;
-    
 
-    public menuAdmon(MenuAdmin menuadmin, ArrayList<Jugador> listajugadores) {
+    public menuAdmon(MenuAdmin menuadmin) {
         this.menuadmin = menuadmin;
-        this.listajugadores = listajugadores;
         this.partido = partido;
-        
+
         this.menuadmin.btnCalificacion.addActionListener(this);
         this.menuadmin.btnEquipos.addActionListener(this);
         this.menuadmin.btnInfraccion.addActionListener(this);
@@ -49,55 +44,48 @@ public class menuAdmon implements ActionListener{
         this.menuadmin.btnSalirLoginJugador.addActionListener(this);
         this.menuadmin.btnSalirMenuAdmin.addActionListener(this);
     }
+
     public void inicio() {
         menuadmin.setTitle("Bienvenido Administrador");
         menuadmin.setLocationRelativeTo(null);
         menuadmin.setVisible(true);
     }
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {
-                
+
         if (e.getSource() == menuadmin.btnCalificacion) {
-            
+
             gestionCalificaciones calificacion;
             calificacion = new gestionCalificaciones(new GestionarCalificaciones());
             calificacion.inicio();
-        }
-        else{
+        } else {
             if (e.getSource() == menuadmin.btnEquipos) {
                 gestionEquipos equipos;
-                equipos = new gestionEquipos(new GestionarEquipos(), listajugadores);
+                equipos = new gestionEquipos(new GestionarEquipos());
                 equipos.inicio();
-            }
-            else{
+            } else {
                 if (e.getSource() == menuadmin.btnInfraccion) {
                     gestionInfraccion infraccion;
                     infraccion = new gestionInfraccion(new GestionarInfraccion());
                     infraccion.inicio();
-                }
-                else{
+                } else {
                     if (e.getSource() == menuadmin.btnJugadores) {
                         gestionJugadores jugadores;
-                        jugadores = new gestionJugadores(new GestionarJugadores(), new Partido(), listajugadores);
+                        jugadores = new gestionJugadores(new GestionarJugadores(), new Partido());
                         jugadores.inicio();
-                    }
-                    else{
+                    } else {
                         if (e.getSource() == menuadmin.btnPartidos) {
                             gestionPartidos partidos;
                             partidos = new gestionPartidos(new GestionarPartidos());
                             partidos.inicio();
-                        }
-                        else{
+                        } else {
                             if (e.getSource() == menuadmin.btnNotificacion) {
                                 //PENDIENTE cuando se cree FRAME
-                            }
-                            else{
+                            } else {
                                 if (e.getSource() == menuadmin.btnSalirLoginJugador) {
-                                    
-                                }
-                                else{
+
+                                } else {
                                     menuadmin.dispose();
                                 }
                             }
@@ -138,5 +126,5 @@ public class menuAdmon implements ActionListener{
             case "Salir": {}
         }*/
     }
-    
+
 }

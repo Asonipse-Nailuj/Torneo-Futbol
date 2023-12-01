@@ -7,11 +7,6 @@
 package Modelo;
 
 import java.util.ArrayList;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  *
@@ -44,14 +39,14 @@ public class Partido {
         int cedu;
         for(int i=0; i<50; i++){
             cedu= listaJugadores.get(i).getDocumento();
-            if(cedula == cedu){
+            /*if(cedula == cedu){
                 Jugador jugadorEncontrado = new Jugador();
                 jugadorEncontrado= listaJugadores.get(i);
                 System.out.println("Información del Jugador:");
                 System.out.println("Nombre: " + listaJugadores.get(i).getNombre());
                 
                 return jugadorEncontrado; // Sale del bucle cuando se encuentra el jugador
-            }
+            }*/
         }
         return null;
     }

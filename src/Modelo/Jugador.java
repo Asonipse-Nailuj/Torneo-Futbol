@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Modelo;
 
 /**
@@ -11,6 +10,7 @@ package Modelo;
  * @author Gustavo
  */
 public class Jugador {
+
     private int Documento;
     private int Telefono;
     private String Nombre;
@@ -19,6 +19,29 @@ public class Jugador {
     private String Email;
     private String Modo;
     private String Suscripcion;
+
+    public Jugador() {
+
+    }
+
+    public Jugador(int Documento, int Telefono, String Nombre, String Apellido, String Posicion, String Email, String Modo, String Suscripcion) {
+        this.Documento = Documento;
+        this.Telefono = Telefono;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Posicion = Posicion;
+        this.Email = Email;
+        this.Modo = Modo;
+        this.Suscripcion = Suscripcion;
+    }
+
+    public Jugador(int Documento, int Telefono, String Nombre, String Apellido, String Email) {
+        this.Documento = Documento;
+        this.Telefono = Telefono;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Email = Email;
+    }
 
     public int getTelefono() {
         return Telefono;
@@ -83,6 +106,5 @@ public class Jugador {
     public void setSuscripcion(String Suscripcion) {
         this.Suscripcion = Suscripcion;
     }
-    
-    
+
 }
