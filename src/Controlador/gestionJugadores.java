@@ -25,10 +25,12 @@ public class gestionJugadores implements ActionListener {
 
     GestionarJugadores gestionarjugadores;
     Partido partido;
+    ArrayList<Jugador> listajugadores;
 
-    public gestionJugadores(GestionarJugadores gestionarjugadores, Partido partido) {
+    public gestionJugadores(GestionarJugadores gestionarjugadores, Partido partido, ArrayList<Jugador> listajugadores) {
         this.gestionarjugadores = gestionarjugadores;
         this.partido = partido;
+        this.listajugadores = listajugadores;
 
         this.gestionarjugadores.btnConsultarJugador.addActionListener(this);
         this.gestionarjugadores.btnSalirGestionJugadores.addActionListener(this);
@@ -46,7 +48,11 @@ public class gestionJugadores implements ActionListener {
 
     public void cargarDatos() {
         // Se trae la lista de jugadores registrada en la base de datos
-        ArrayList<Jugador> listado_jugadores = Conexion.getJugadores();
+        //ArrayList<Jugador> listado_jugadores = Conexion.getJugadores();
+        
+        listajugadores = new ArrayList(20); // Inicializa un ArrayList con una capacidad inicial de 50
+        listajugadores = Conexion.getJugadores();
+        System.out.println("Iniciando lista");
 
         // ....
     }
@@ -94,11 +100,14 @@ public class gestionJugadores implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == gestionarjugadores.btnConsultarJugador) {
             //La lista ya debe estar llena, se debe llenar cuando se inicie el programa con la base de datos
-            /*if (partido.buscarJugador(Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText()), listajugadores)) {//Revisa si el jugador esta en la lista
+            if (partido.buscarJugador(Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText()), listajugadores)) {//Revisa si el jugador esta en la lista
                 Jugador jugador = new Jugador();
                 jugador = partido.BuscarJugador2(Integer.parseInt(gestionarjugadores.txtIdentificacionJugadorGestion.getText()), listajugadores); // Tomo los datos del jugador
                 listar(gestionarjugadores.tableJugadores, jugador); //Llamo la funcion para mostrar en la tabla
-            }*/
+            }
+            else{
+                System.out.println("Jugador no encontrado");
+            }
 
         } else {
             if (e.getSource() == gestionarjugadores.btnSalirGestionJugadores) {

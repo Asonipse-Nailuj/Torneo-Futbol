@@ -12,6 +12,7 @@ import Vista.GestionarEquipos;
 import Vista.GestionarInfraccion;
 import Vista.GestionarJugadores;
 import Vista.GestionarPartidos;
+import Vista.InformacionJugador;
 import Vista.MenuAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,11 +26,13 @@ public class menuAdmon implements ActionListener {
 
     MenuAdmin menuadmin;
     GestionarPartidos gestionarpartidos;
+    InformacionJugador informacionjugador;
     GestionarEquipos gestionarequipos;
     GestionarCalificaciones gestionarcalificaciones;
     GestionarInfraccion gestionarinfraccion;
     GestionarJugadores gestionarjugadores;
     Partido partido;
+    ArrayList<Jugador> listajugadores;
 
     public menuAdmon(MenuAdmin menuadmin) {
         this.menuadmin = menuadmin;
@@ -57,7 +60,7 @@ public class menuAdmon implements ActionListener {
         if (e.getSource() == menuadmin.btnCalificacion) {
 
             gestionCalificaciones calificacion;
-            calificacion = new gestionCalificaciones(new GestionarCalificaciones());
+            calificacion = new gestionCalificaciones(new GestionarCalificaciones(), listajugadores);
             calificacion.inicio();
         } else {
             if (e.getSource() == menuadmin.btnEquipos) {
@@ -67,12 +70,12 @@ public class menuAdmon implements ActionListener {
             } else {
                 if (e.getSource() == menuadmin.btnInfraccion) {
                     gestionInfraccion infraccion;
-                    infraccion = new gestionInfraccion(new GestionarInfraccion());
+                    infraccion = new gestionInfraccion(new GestionarInfraccion(), listajugadores);
                     infraccion.inicio();
                 } else {
                     if (e.getSource() == menuadmin.btnJugadores) {
                         gestionJugadores jugadores;
-                        jugadores = new gestionJugadores(new GestionarJugadores(), new Partido());
+                        jugadores = new gestionJugadores(new GestionarJugadores(), new Partido(), listajugadores);
                         jugadores.inicio();
                     } else {
                         if (e.getSource() == menuadmin.btnPartidos) {
