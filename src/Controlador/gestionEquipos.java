@@ -16,13 +16,11 @@ import java.util.ArrayList;
 public class gestionEquipos implements ActionListener{
     
     GestionarEquipos gestionarequipos;
-    ArrayList<Jugador> listajugadores;
     Jugador jugador;
     Partido partido;
 
-    public gestionEquipos(GestionarEquipos gestionarequipos, ArrayList<Jugador> listajugadores) {
+    public gestionEquipos(GestionarEquipos gestionarequipos) {
         this.gestionarequipos = gestionarequipos;
-        this.listajugadores = listajugadores;
         
         this.gestionarequipos.btnGenerarEquipos.addActionListener(this);
         this.gestionarequipos.btnGenerarEquipos1.addActionListener(this);
